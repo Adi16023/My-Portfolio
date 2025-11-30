@@ -15,6 +15,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'adithyachalla.wordpress.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
 }

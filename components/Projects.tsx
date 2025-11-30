@@ -2,67 +2,68 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import Image from 'next/image'
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with payment integration and real-time inventory management.',
-    category: 'Web App',
-    year: '2024',
-    tech: ['React', 'Node.js', 'Stripe'],
-    url: '#',
-    width: 'wide',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
-  },
-  {
-    title: 'Task Management',
-    description: 'Collaborative project management tool with real-time updates and team chat.',
-    category: 'SaaS',
-    year: '2024',
-    tech: ['Next.js', 'Socket.io', 'MongoDB'],
-    url: '#',
-    width: 'narrow',
-    image: 'https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&q=80',
-  },
-  {
-    title: 'AI Content Generator',
-    description: 'SaaS platform leveraging AI to generate marketing content and social media captions.',
-    category: 'AI Tool',
+    title: 'Endless Design',
+    description: 'A stunning portfolio website with mobile-first design philosophy, featuring great UI/UX presented in a unique web view that mimics mobile aesthetics.',
+    category: 'Portfolio',
     year: '2023',
-    tech: ['Python', 'OpenAI', 'FastAPI'],
-    url: '#',
+    tech: ['React', 'CSS', 'Responsive Design'],
+    url: 'https://endless-design.vercel.app/',
     width: 'narrow',
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+    image: '/images/endlessdesign.png',
   },
   {
-    title: 'Real Estate Portal',
-    description: 'Property listing platform with advanced search filters and virtual tours.',
+    title: 'Rocket Incentive',
+    description: 'Modern landing page for a comprehensive loyalty and rewards platform, designed to engage users and drive customer retention.',
+    category: 'Landing Page',
+    year: '2025',
+    tech: ['React', 'TailwindCSS', 'Framer Motion'],
+    url: 'https://www.rocketincentive.com/',
+    width: 'wide',
+    image: '/images/rocketincentive.png',
+  },
+  {
+    title: 'VendorContacts',
+    description: 'Secure platform bridging Architects and Vendors with end-to-end encrypted file and text sharing, ensuring privacy without third-party access.',
     category: 'Web Platform',
     year: '2023',
-    tech: ['Vue.js', 'Firebase', 'Maps API'],
-    url: '#',
-    width: 'wide',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80',
-  },
-  {
-    title: 'Fitness Tracker',
-    description: 'Progressive web app for tracking workouts, nutrition, and progress.',
-    category: 'Mobile App',
-    year: '2022',
-    tech: ['React Native', 'GraphQL'],
-    url: '#',
-    width: 'wide',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80',
-  },
-  {
-    title: 'Analytics Dashboard',
-    description: 'Business intelligence dashboard with real-time data visualization.',
-    category: '3D Design',
-    year: '2022',
-    tech: ['D3.js', 'React', 'PostgreSQL'],
-    url: '#',
+    tech: ['Next.js', 'Encryption', 'WebRTC'],
+    url: 'https://vendorcontacts.vercel.app/',
     width: 'narrow',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    image: '/images/vendorcontacts.png',
+  },
+  {
+    title: 'My Gamers World',
+    description: 'Specialized gift and rewards platform exclusively for gaming vouchers, providing gamers with easy access to their favorite game credits and content.',
+    category: 'E-Commerce',
+    year: '2024',
+    tech: ['Next.js', 'Payment Gateway', 'API'],
+    url: 'https://mygamersworld.com/',
+    width: 'wide',
+    image: '/images/mygamersworld.png',
+  },
+  {
+    title: 'LittleShows',
+    description: 'One-stop platform for discovering shows, short films, and films uploaded by talented creators sharing their work with the world.',
+    category: 'Media Platform',
+    year: '2023',
+    tech: ['React', 'Video Streaming', 'Firebase'],
+    url: 'https://littleshows-web.vercel.app/',
+    width: 'narrow',
+    image: '/images/littleshows.png',
+  },
+  {
+    title: 'Cualixis',
+    description: 'Consumer-goods company operating through an innovative network-driven distribution model, empowering individuals to build independent retail businesses.',
+    category: 'Business Platform',
+    year: '2025',
+    tech: ['Next.js', 'Distribution Network', 'CRM'],
+    url: 'https://www.cualixis.com/',
+    width: 'narrow',
+    image: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80',
   },
 ]
 
@@ -79,6 +80,7 @@ function FlipCard({ project, index }: { project: typeof projects[0], index: numb
       style={{ perspective: '1000px' }}
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
+      onClick={() => window.open(project.url, '_blank')}
     >
       <div
         className="relative w-full h-full transition-transform duration-[800ms] ease-in-out"
@@ -93,11 +95,14 @@ function FlipCard({ project, index }: { project: typeof projects[0], index: numb
           style={{ backfaceVisibility: 'hidden' }}
         >
           <div className="relative w-full h-full overflow-hidden rounded-t-xl">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              quality={95}
+              priority={index < 3}
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 to-transparent" />
@@ -147,7 +152,7 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[240px]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[280px]">
           {projects.map((project, index) => (
             <FlipCard key={index} project={project} index={index} />
           ))}
