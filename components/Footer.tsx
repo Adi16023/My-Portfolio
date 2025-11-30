@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="w-full">
           <div className="mb-12 text-center">
             <h2 className="text-4xl sm:text-5xl font-mono text-secondary mb-4">Get In Touch</h2>
-            <p className="text-secondary-light">Have a project in mind? Let's work together!</p>
+            <p className="text-secondary-light">Have a project in mind? Let&apos;s work together!</p>
           </div>
 
           <form onSubmit={handleSubmit} className="rounded-2xl border-2 border-secondary/20 bg-white p-8 max-w-2xl mx-auto shadow-sm">
@@ -92,6 +92,7 @@ export default function Footer() {
             {/* Profile Section */}
             <div className="flex flex-col items-center md:items-start">
               <div className="w-20 h-20 rounded-full bg-secondary/10 mb-4 overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src="https://github.com/Adi16023.png" 
                   alt="Adithya Challa"
