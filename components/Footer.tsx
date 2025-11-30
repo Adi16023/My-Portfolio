@@ -127,7 +127,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a href="#blogs" className="text-secondary/60 hover:text-primary transition-colors text-sm">
-                    Writing
+                    Blogs
                   </a>
                 </li>
                 <li>
