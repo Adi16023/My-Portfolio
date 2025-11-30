@@ -20,7 +20,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-mono font-normal text-secondary mb-6 leading-tight">
-              Full Stack Developer.
+              Full Stack Developer
             </h1>
             <p className="text-xl sm:text-2xl text-secondary-light font-light">
               Building digital experiences that matter
