@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { Download } from 'lucide-react'
 
 export default function Hero() {
   const { scrollYProgress } = useScroll()
@@ -40,40 +41,19 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="flex flex-wrap items-center justify-center gap-4 pt-8"
+            className="pt-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             <a
-              href="#experience"
-              className="btn-outline text-secondary hover:text-secondary font-mono"
+              href="/docs/Adithya Challa SDE Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline text-secondary hover:text-secondary font-mono inline-flex items-center gap-2"
             >
-              Experience
-            </a>
-            <a
-              href="#projects"
-              className="btn-outline text-secondary hover:text-secondary font-mono"
-            >
-              Projects
-            </a>
-            <a
-              href="#tech-stack"
-              className="btn-outline text-secondary hover:text-secondary font-mono"
-            >
-              Tech
-            </a>
-            <a
-              href="#blogs"
-              className="btn-outline text-secondary hover:text-secondary font-mono"
-            >
-              Blogs
-            </a>
-            <a
-              href="#contact"
-              className="btn-outline text-secondary hover:text-secondary font-mono"
-            >
-              Contact
+              <Download className="w-4 h-4" />
+              View Resume
             </a>
           </motion.div>
 
