@@ -121,7 +121,7 @@ export default function Blogs() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   className={`group relative rounded-2xl border-2 border-secondary/20 bg-white p-5 hover:border-primary/40 transition-all ${
                     blog.width === 'xlarge' ? 'col-span-5' :
                     blog.width === 'large' ? 'col-span-3' :
@@ -170,7 +170,7 @@ export default function Blogs() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   className={`group relative rounded-2xl border-2 border-secondary/30 bg-[#96cfff] p-5 hover:border-secondary transition-all ${
                     story.width === 'xlarge' ? 'col-span-5' :
                     story.width === 'large' ? 'col-span-3' :
