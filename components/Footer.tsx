@@ -169,7 +169,7 @@ export default function Footer() {
                   <span className="text-sm">GitHub</span>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/adithya-challa/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-secondary/60 hover:text-primary transition-colors group"

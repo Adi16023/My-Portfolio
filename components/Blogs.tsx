@@ -103,7 +103,7 @@ export default function Blogs() {
             
             <div className="relative">
               {/* Blog Cards with blur effect */}
-              <div className="grid grid-cols-5 gap-4 auto-rows-[180px] blur-sm pointer-events-none">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-4 auto-rows-[180px] blur-sm pointer-events-none">
                 {techBlogs.map((blog, index) => (
                   <motion.div
                     key={index}
@@ -112,10 +112,10 @@ export default function Blogs() {
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                     viewport={{ once: true, margin: "-100px" }}
                     className={`group relative rounded-2xl border-2 border-secondary/20 bg-white p-5 transition-all ${
-                      blog.width === 'xlarge' ? 'col-span-5' :
-                      blog.width === 'large' ? 'col-span-3' :
-                      blog.width === 'medium' ? 'col-span-2' :
-                      'col-span-1'
+                      blog.width === 'xlarge' ? 'md:col-span-5' :
+                      blog.width === 'large' ? 'md:col-span-3' :
+                      blog.width === 'medium' ? 'md:col-span-2' :
+                      'md:col-span-1'
                     }`}
                   >
                     <div className="h-full flex flex-col">
@@ -169,7 +169,7 @@ export default function Blogs() {
               <h3 className="text-2xl font-mono text-secondary">Story Blogs</h3>
             </div>
             
-            <div className="grid grid-cols-5 gap-4 auto-rows-[240px]">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-4 auto-rows-[240px]">
               {stories.map((story, index) => (
                 <motion.a
                   key={index}
@@ -181,10 +181,10 @@ export default function Blogs() {
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true, margin: "-100px" }}
                   className={`group relative rounded-2xl border-2 border-secondary/30 bg-[#96cfff] overflow-hidden hover:border-secondary transition-all ${
-                    story.width === 'xlarge' ? 'col-span-5' :
-                    story.width === 'large' ? 'col-span-3' :
-                    story.width === 'medium' ? 'col-span-2' :
-                    'col-span-1'
+                    story.width === 'xlarge' ? 'md:col-span-5' :
+                    story.width === 'large' ? 'md:col-span-3' :
+                    story.width === 'medium' ? 'md:col-span-2' :
+                    'md:col-span-1'
                   }`}
                 >
                   <div className="h-full flex flex-col">
