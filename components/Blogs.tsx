@@ -95,51 +95,70 @@ export default function Blogs() {
           <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-secondary/20 transform -translate-x-1/2"></div>
           
           {/* Left Side - Tech Blogs (Light Theme) */}
-          <div className="space-y-4">
+          <div className="space-y-4 relative">
             <div className="flex items-center gap-3 mb-6">
               <Code2 className="w-6 h-6 text-primary" />
               <h3 className="text-2xl font-mono text-secondary">Tech Blogs</h3>
             </div>
             
-            <div className="grid grid-cols-5 gap-4 auto-rows-[180px]">
-              {techBlogs.map((blog, index) => (
-                <motion.a
-                  key={index}
-                  href={blog.url}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  className={`group relative rounded-2xl border-2 border-secondary/20 bg-white p-5 hover:border-primary/40 transition-all ${
-                    blog.width === 'xlarge' ? 'col-span-5' :
-                    blog.width === 'large' ? 'col-span-3' :
-                    blog.width === 'medium' ? 'col-span-2' :
-                    'col-span-1'
-                  }`}
+            <div className="relative">
+              {/* Blog Cards with blur effect */}
+              <div className="grid grid-cols-5 gap-4 auto-rows-[180px] blur-sm pointer-events-none">
+                {techBlogs.map((blog, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    className={`group relative rounded-2xl border-2 border-secondary/20 bg-white p-5 transition-all ${
+                      blog.width === 'xlarge' ? 'col-span-5' :
+                      blog.width === 'large' ? 'col-span-3' :
+                      blog.width === 'medium' ? 'col-span-2' :
+                      'col-span-1'
+                    }`}
+                  >
+                    <div className="h-full flex flex-col">
+                      <div className="flex items-center gap-2 mb-3 text-[10px] font-mono text-secondary/60">
+                        <Calendar className="w-3 h-3" />
+                        <span>{blog.date}</span>
+                        <span>•</span>
+                        <Clock className="w-3 h-3" />
+                        <span>{blog.readTime}</span>
+                      </div>
+                      
+                      <h4 className="text-sm font-mono text-secondary mb-2 line-clamp-2">
+                        {blog.title}
+                      </h4>
+                      
+                      <p className="text-secondary/70 text-xs leading-relaxed flex-1 line-clamp-3">
+                        {blog.excerpt}
+                      </p>
+                      
+                      <div className="mt-2 text-primary text-xs font-mono gap-1 flex items-center">
+                        Read <span>→</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Coming Soon Overlay */}
+              <div className="absolute inset-0 flex items-center justify-center bg-background/30 backdrop-blur-sm rounded-2xl">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="text-center"
                 >
-                  <div className="h-full flex flex-col">
-                    <div className="flex items-center gap-2 mb-3 text-[10px] font-mono text-secondary/60">
-                      <Calendar className="w-3 h-3" />
-                      <span>{blog.date}</span>
-                      <span>•</span>
-                      <Clock className="w-3 h-3" />
-                      <span>{blog.readTime}</span>
-                    </div>
-                    
-                    <h4 className="text-sm font-mono text-secondary mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                      {blog.title}
-                    </h4>
-                    
-                    <p className="text-secondary/70 text-xs leading-relaxed flex-1 line-clamp-3">
-                      {blog.excerpt}
-                    </p>
-                    
-                    <div className="mt-2 text-primary text-xs font-mono group-hover:gap-2 gap-1 flex items-center transition-all">
-                      Read <span className="group-hover:translate-x-1 transition-transform">→</span>
-                    </div>
+                  <div className="bg-white/90 backdrop-blur-md border-2 border-primary/30 rounded-2xl px-8 py-6 shadow-xl">
+                    <Code2 className="w-12 h-12 text-primary mx-auto mb-3" />
+                    <h4 className="text-2xl font-mono text-secondary mb-2">Coming Soon</h4>
+                    <p className="text-secondary/70 text-sm font-mono">Tech blogs are on the way</p>
                   </div>
-                </motion.a>
-              ))}
+                </motion.div>
+              </div>
             </div>
           </div>
 
