@@ -121,11 +121,6 @@ export default function Footer() {
               <h4 className="font-mono text-sm text-secondary mb-4 uppercase tracking-wider">Quick Links</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#projects" className="text-secondary/60 hover:text-primary transition-colors text-sm">
-                    Projects
-                  </a>
-                </li>
-                <li>
                   <a href="#experience" className="text-secondary/60 hover:text-primary transition-colors text-sm">
                     Experience
                   </a>
@@ -133,6 +128,11 @@ export default function Footer() {
                 <li>
                   <a href="#tech-stack" className="text-secondary/60 hover:text-primary transition-colors text-sm">
                     Tech
+                  </a>
+                </li>
+                <li>
+                  <a href="#projects" className="text-secondary/60 hover:text-primary transition-colors text-sm">
+                    Projects
                   </a>
                 </li>
                 <li>
