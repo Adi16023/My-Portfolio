@@ -4,7 +4,7 @@ import Navigation from '@/components/Navigation'
 import ScrollProgress from '@/components/ScrollProgress'
 
 export const metadata: Metadata = {
-  title: 'My Portfolio | Adi16023',
+  title: 'Adithya Challa | SDE Portfolio',
   description: 'Full Stack Developer Portfolio - Work Experience, Projects & Blogs',
 }
 
