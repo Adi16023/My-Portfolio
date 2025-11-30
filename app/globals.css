@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  body {
+    @apply bg-white text-secondary;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply text-primary;
+  }
+  
+  .card-minimal {
+    border: 2px solid #1a3a52;
+    background: #96cfff;
+    border-radius: 1rem;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 0 #1a3a52;
+    transform: translateY(0);
+    overflow: hidden;
+  }
+  
+  .card-minimal:hover {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #1a3a52;
+  }
+  
+  .card-minimal:active {
+    transform: translateY(4px);
+    box-shadow: 0 0 0 #1a3a52;
+  }
+  
+  .btn-outline {
+    border: 2px solid #1a3a52;
+    background: white;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.15s ease;
+    box-shadow: 0 4px 0 #1a3a52;
+    position: relative;
+    top: 0;
+  }
+  
+  .btn-outline:hover {
+    background: #96cfff;
+    top: 2px;
+    box-shadow: 0 2px 0 #1a3a52;
+  }
+  
+  .btn-outline:active {
+    top: 4px;
+    box-shadow: 0 0 0 #1a3a52;
+  }
+  
+  .link-underline {
+    position: relative;
+  }
+  
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #1e3a8a;
+    transition: width 0.3s ease;
+  }
+  
+  .link-underline:hover::after {
+    width: 100%;
+  }
+}
