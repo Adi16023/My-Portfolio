@@ -92,18 +92,19 @@ function FlipCard({ project, index }: { project: typeof projects[0], index: numb
           className="absolute inset-0 rounded-3xl overflow-hidden"
           style={{ backfaceVisibility: 'hidden' }}
         >
-          <div className="relative w-full h-full">
-            <img 
-              src={project.image} 
+          <div className="relative w-full h-full overflow-hidden rounded-t-xl">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={project.image}
               alt={project.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 to-transparent" />
-            <div className="absolute top-4 right-4">
-              <span className="text-xs font-mono text-white bg-primary/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
-                {project.category}
-              </span>
-            </div>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 to-transparent" />
+          <div className="absolute top-4 right-4">
+            <span className="text-xs font-mono text-white bg-primary/90 backdrop-blur-sm px-3 py-1.5 rounded-full">
+              {project.category}
+            </span>
           </div>
         </div>
 
