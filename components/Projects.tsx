@@ -63,7 +63,7 @@ const projects = [
     tech: ['Next.js', 'Distribution Network', 'CRM'],
     url: 'https://www.cualixis.com/',
     width: 'narrow',
-    image: 'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&q=80',
+    image: '/images/cualixis.png',
   },
 ]
 
@@ -143,12 +143,12 @@ export default function Projects() {
   return (
     <section id="projects" className="py-16 px-6 sm:px-8 lg:px-16 xl:px-24">
       <div className="w-full">
-        <div className="mb-12">
+        <div className="mb-12 text-center">
           <h2 className="text-4xl sm:text-5xl font-mono text-secondary mb-4">
-            Work
+            Projects
           </h2>
           <p className="text-secondary-light">
-            Hover over cards to see details
+            Selected works and experiments from my portfolio
           </p>
         </div>
 

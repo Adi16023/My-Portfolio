@@ -122,17 +122,22 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <a href="#projects" className="text-secondary/60 hover:text-primary transition-colors text-sm">
-                    Work
-                  </a>
-                </li>
-                <li>
-                  <a href="#blogs" className="text-secondary/60 hover:text-primary transition-colors text-sm">
-                    Blogs
+                    Projects
                   </a>
                 </li>
                 <li>
                   <a href="#experience" className="text-secondary/60 hover:text-primary transition-colors text-sm">
                     Experience
+                  </a>
+                </li>
+                <li>
+                  <a href="#tech-stack" className="text-secondary/60 hover:text-primary transition-colors text-sm">
+                    Tech
+                  </a>
+                </li>
+                <li>
+                  <a href="#blogs" className="text-secondary/60 hover:text-primary transition-colors text-sm">
+                    Blogs
                   </a>
                 </li>
                 <li>

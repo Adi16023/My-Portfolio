@@ -55,7 +55,13 @@ export default function Hero() {
               href="#projects"
               className="btn-outline text-secondary hover:text-secondary font-mono"
             >
-              Work
+              Projects
+            </a>
+            <a
+              href="#tech-stack"
+              className="btn-outline text-secondary hover:text-secondary font-mono"
+            >
+              Tech
             </a>
             <a
               href="#blogs"

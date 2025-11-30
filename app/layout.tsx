@@ -5,7 +5,7 @@ import ScrollProgress from '@/components/ScrollProgress'
 
 export const metadata: Metadata = {
   title: 'Adithya Challa | SDE Portfolio',
-  description: 'Full Stack Developer Portfolio - Work Experience, Projects & Blogs',
+  description: 'Full Stack Developer Portfolio - Experience, Projects & Blogs',
 }
 
 export default function RootLayout({

@@ -83,7 +83,7 @@ export default function WorkExperience() {
   return (
     <section id="experience" className="py-16 px-6 sm:px-8 lg:px-16 xl:px-24" ref={sectionRef}>
       <div className="w-full">
-        <div className="mb-12">
+        <div className="mb-12 text-center">
           <h2 className="text-4xl sm:text-5xl font-mono text-secondary mb-4">
             Experience
           </h2>
@@ -94,27 +94,28 @@ export default function WorkExperience() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-primary/20 hidden md:block" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 hidden md:block transform -translate-x-1/2" />
           
-          <div className="space-y-8">
+          <div className="space-y-12">
             {experiences.map((exp, index) => {
+              const isLeft = index % 2 === 0
               const ExperienceCard = () => {
                 const [logoError, setLogoError] = useState(false)
                 
                 return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="relative group"
               >
                 {/* Timeline dot */}
-                <div className="absolute left-6 top-6 w-3 h-3 rounded-full bg-primary border-2 border-white transform -translate-x-1/2 hidden md:block group-hover:scale-150 transition-transform z-10" />
+                <div className="absolute left-1/2 top-6 w-3 h-3 rounded-full bg-primary border-2 border-white transform -translate-x-1/2 hidden md:block group-hover:scale-150 transition-transform z-10" />
                 
                 {/* Content */}
-                <div className="md:ml-16">
+                <div className={`md:w-[calc(50%-2rem)] ${isLeft ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
                   <div className="card-minimal p-6 overflow-hidden">
                     {/* Compact view */}
                     <div className="space-y-3">
