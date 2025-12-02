@@ -13,7 +13,7 @@
   }
   
   body {
-    @apply bg-white text-secondary;
+    @apply bg-white text-secondary dark:bg-gray-900 dark:text-white;
     overflow-x: hidden;
   }
 }
@@ -33,14 +33,28 @@
     overflow: hidden;
   }
   
+  .dark .card-minimal {
+    border: 2px solid #ffffff;
+    background: #1f2937;
+    box-shadow: 0 4px 0 #ffffff;
+  }
+  
   .card-minimal:hover {
     transform: translateY(2px);
     box-shadow: 0 2px 0 #1a3a52;
   }
   
+  .dark .card-minimal:hover {
+    box-shadow: 0 2px 0 #ffffff;
+  }
+  
   .card-minimal:active {
     transform: translateY(4px);
     box-shadow: 0 0 0 #1a3a52;
+  }
+  
+  .dark .card-minimal:active {
+    box-shadow: 0 0 0 #ffffff;
   }
   
   .btn-outline {
@@ -54,15 +68,30 @@
     top: 0;
   }
   
+  .dark .btn-outline {
+    border: 2px solid #ffffff;
+    background: #1f2937;
+    box-shadow: 0 4px 0 #ffffff;
+  }
+  
   .btn-outline:hover {
     background: #96cfff;
     top: 2px;
     box-shadow: 0 2px 0 #1a3a52;
   }
   
+  .dark .btn-outline:hover {
+    background: #374151;
+    box-shadow: 0 2px 0 #ffffff;
+  }
+  
   .btn-outline:active {
     top: 4px;
     box-shadow: 0 0 0 #1a3a52;
+  }
+  
+  .dark .btn-outline:active {
+    box-shadow: 0 0 0 #ffffff;
   }
   
   .link-underline {
@@ -78,6 +107,10 @@
     height: 1px;
     background-color: #1e3a8a;
     transition: width 0.3s ease;
+  }
+  
+  .dark .link-underline::after {
+    background-color: #ffffff;
   }
   
   .link-underline:hover::after {

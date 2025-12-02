@@ -39,23 +39,23 @@ export default function TechStack() {
   const row2Items = [...techStack.row2, ...techStack.row2]
 
   return (
-    <section id="tech-stack" className="py-16 px-6 sm:px-8 lg:px-16 xl:px-24 bg-gradient-to-b from-transparent to-primary/5">
+    <section id="tech-stack" className="py-16 px-6 sm:px-8 lg:px-16 xl:px-24 bg-gradient-to-b from-transparent to-primary/5 dark:to-white/5">
       <div className="w-full">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl sm:text-5xl font-mono text-secondary mb-4">
+          <h2 className="text-4xl sm:text-5xl font-mono text-secondary dark:text-white mb-4">
             Technical Skills and Interests
           </h2>
         </div>
 
         {/* Row 1 - Scrolling Right */}
         <div className="relative overflow-hidden mb-8">
-          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-10 pointer-events-none"></div>
           
           <motion.div
             className="flex gap-12"
             animate={{
-              x: [0, -50 + '%'],
+              x: ['0%', '-50%'],
             }}
             transition={{
               duration: 30,
@@ -68,14 +68,14 @@ export default function TechStack() {
                 key={`${tech.name}-${index}`}
                 className="flex-shrink-0 group"
               >
-                <div className="w-20 h-20 flex items-center justify-center bg-white rounded-2xl border-2 border-secondary/10 hover:border-primary/40 transition-all shadow-sm hover:shadow-md">
+                <div className="w-20 h-20 flex items-center justify-center bg-white dark:bg-gray-800 rounded-2xl border-2 border-secondary/10 dark:border-white/20 hover:border-primary/40 dark:hover:border-white/40 transition-all shadow-sm hover:shadow-md">
                   <img
                     src={tech.logo}
                     alt={tech.name}
                     className="w-12 h-12 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                   />
                 </div>
-                <p className="text-xs text-center mt-2 font-mono text-secondary/70">
+                <p className="text-xs text-center mt-2 font-mono text-secondary/70 dark:text-white/80">
                   {tech.name}
                 </p>
               </div>
@@ -85,13 +85,13 @@ export default function TechStack() {
 
         {/* Row 2 - Scrolling Left */}
         <div className="relative overflow-hidden">
-          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-10 pointer-events-none"></div>
           
           <motion.div
             className="flex gap-12"
             animate={{
-              x: [-50 + '%', 0],
+              x: ['-50%', '0%'],
             }}
             transition={{
               duration: 30,
@@ -104,14 +104,14 @@ export default function TechStack() {
                 key={`${tech.name}-${index}`}
                 className="flex-shrink-0 group"
               >
-                <div className="w-20 h-20 flex items-center justify-center bg-white rounded-2xl border-2 border-secondary/10 hover:border-primary/40 transition-all shadow-sm hover:shadow-md">
+                <div className="w-20 h-20 flex items-center justify-center bg-white dark:bg-gray-800 rounded-2xl border-2 border-secondary/10 dark:border-white/20 hover:border-primary/40 dark:hover:border-white/40 transition-all shadow-sm hover:shadow-md">
                   <img
                     src={tech.logo}
                     alt={tech.name}
                     className="w-12 h-12 object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                   />
                 </div>
-                <p className="text-xs text-center mt-2 font-mono text-secondary/70">
+                <p className="text-xs text-center mt-2 font-mono text-secondary/70 dark:text-white/80">
                   {tech.name}
                 </p>
               </div>

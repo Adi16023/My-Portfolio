@@ -19,17 +19,17 @@ export default function Footer() {
   return (
     <>
       {/* Contact Form Section */}
-      <section id="contact" className="py-16 px-6 sm:px-8 lg:px-16 xl:px-24 bg-secondary/5">
+      <section id="contact" className="py-16 px-6 sm:px-8 lg:px-16 xl:px-24 bg-secondary/5 dark:bg-gray-900/50">
         <div className="w-full">
           <div className="mb-12 text-center">
-            <h2 className="text-4xl sm:text-5xl font-mono text-secondary mb-4">Get In Touch</h2>
-            <p className="text-secondary-light">Have a project in mind? Let&apos;s work together!</p>
+            <h2 className="text-4xl sm:text-5xl font-mono text-secondary dark:text-white mb-4">Get In Touch</h2>
+            <p className="text-secondary-light dark:text-white">Have a project in mind? Let&apos;s work together!</p>
           </div>
 
-          <form onSubmit={handleSubmit} className="rounded-2xl border-2 border-secondary/20 bg-white p-8 max-w-2xl mx-auto shadow-sm">
+          <form onSubmit={handleSubmit} className="rounded-2xl border-2 border-secondary/20 dark:border-white/20 bg-white dark:bg-gray-800 p-8 max-w-2xl mx-auto shadow-sm">
             <div className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-mono text-secondary mb-2">
+                <label htmlFor="name" className="block text-sm font-mono text-secondary dark:text-white mb-2">
                   Name
                 </label>
                 <input
@@ -38,13 +38,13 @@ export default function Footer() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-secondary/20 font-mono text-sm focus:border-primary focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-secondary/20 dark:border-white/20 dark:bg-gray-700 dark:text-white font-mono text-sm focus:border-primary dark:focus:border-white focus:outline-none transition-colors"
                   placeholder="Your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-mono text-secondary mb-2">
+                <label htmlFor="email" className="block text-sm font-mono text-secondary dark:text-white mb-2">
                   Email
                 </label>
                 <input
@@ -53,13 +53,13 @@ export default function Footer() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-secondary/20 font-mono text-sm focus:border-primary focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-secondary/20 dark:border-white/20 dark:bg-gray-700 dark:text-white font-mono text-sm focus:border-primary dark:focus:border-white focus:outline-none transition-colors"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-mono text-secondary mb-2">
+                <label htmlFor="message" className="block text-sm font-mono text-secondary dark:text-white mb-2">
                   Message
                 </label>
                 <textarea
@@ -68,14 +68,14 @@ export default function Footer() {
                   rows={6}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-4 py-3 rounded-lg border-2 border-secondary/20 font-mono text-sm focus:border-primary focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-lg border-2 border-secondary/20 dark:border-white/20 dark:bg-gray-700 dark:text-white font-mono text-sm focus:border-primary dark:focus:border-white focus:outline-none transition-colors resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full btn-outline text-secondary font-mono flex items-center justify-center gap-2 group"
+                className="w-full btn-outline text-secondary dark:text-white hover:text-secondary dark:hover:text-white font-mono flex items-center justify-center gap-2 group"
               >
                 Send Message
                 <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -86,7 +86,7 @@ export default function Footer() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-secondary/10 py-12 px-6 sm:px-8 lg:px-16 xl:px-24">
+      <footer className="border-t border-secondary/10 dark:border-white/10 py-12 px-6 sm:px-8 lg:px-16 xl:px-24">
         <div className="w-full">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
             {/* Profile Section */}
@@ -99,18 +99,18 @@ export default function Footer() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <h3 className="font-mono text-lg text-secondary mb-3">Adithya Challa</h3>
-              <div className="space-y-2 text-xs text-secondary/60">
+              <h3 className="font-mono text-lg text-secondary dark:text-white mb-3">Adithya Challa</h3>
+              <div className="space-y-2 text-xs text-secondary/60 dark:text-white/80">
                 <div className="flex items-center gap-2">
-                  <Code2 className="w-4 h-4 text-primary" />
+                  <Code2 className="w-4 h-4 text-primary dark:text-white" />
                   <span>Software Developer Engineer</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Layers className="w-4 h-4 text-primary" />
+                  <Layers className="w-4 h-4 text-primary dark:text-white" />
                   <span>Full Stack Developer</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-primary" />
+                  <Sparkles className="w-4 h-4 text-primary dark:text-white" />
                   <span>AI & Tech Enthusiast</span>
                 </div>
               </div>
@@ -118,30 +118,30 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="font-mono text-sm text-secondary mb-4 uppercase tracking-wider">Quick Links</h4>
+              <h4 className="font-mono text-sm text-secondary dark:text-white mb-4 uppercase tracking-wider">Quick Links</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#experience" className="text-secondary/60 hover:text-primary transition-colors text-sm">
+                  <a href="#experience" className="text-secondary/60 dark:text-white/80 hover:text-primary dark:hover:text-white transition-colors text-sm">
                     Experience
                   </a>
                 </li>
                 <li>
-                  <a href="#tech-stack" className="text-secondary/60 hover:text-primary transition-colors text-sm">
+                  <a href="#tech-stack" className="text-secondary/60 dark:text-white/80 hover:text-primary dark:hover:text-white transition-colors text-sm">
                     Tech
                   </a>
                 </li>
                 <li>
-                  <a href="#projects" className="text-secondary/60 hover:text-primary transition-colors text-sm">
+                  <a href="#projects" className="text-secondary/60 dark:text-white/80 hover:text-primary dark:hover:text-white transition-colors text-sm">
                     Projects
                   </a>
                 </li>
                 <li>
-                  <a href="#blogs" className="text-secondary/60 hover:text-primary transition-colors text-sm">
+                  <a href="#blogs" className="text-secondary/60 dark:text-white/80 hover:text-primary dark:hover:text-white transition-colors text-sm">
                     Blogs
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="text-secondary/60 hover:text-primary transition-colors text-sm">
+                  <a href="#contact" className="text-secondary/60 dark:text-white/80 hover:text-primary dark:hover:text-white transition-colors text-sm">
                     Contact
                   </a>
                 </li>
@@ -150,11 +150,11 @@ export default function Footer() {
 
             {/* Socials */}
             <div>
-              <h4 className="font-mono text-sm text-secondary mb-4 uppercase tracking-wider">Connect</h4>
+              <h4 className="font-mono text-sm text-secondary dark:text-white mb-4 uppercase tracking-wider">Connect</h4>
               <div className="space-y-3">
                 <a
                   href="mailto:adithya.challa1@gmail.com"
-                  className="flex items-center gap-3 text-secondary/60 hover:text-primary transition-colors group"
+                  className="flex items-center gap-3 text-secondary/60 dark:text-white/80 hover:text-primary dark:hover:text-white transition-colors group"
                 >
                   <Mail className="w-5 h-5" />
                   <span className="text-sm">Email</span>
@@ -163,7 +163,7 @@ export default function Footer() {
                   href="https://github.com/Adi16023"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-secondary/60 hover:text-primary transition-colors group"
+                  className="flex items-center gap-3 text-secondary/60 dark:text-white/80 hover:text-primary dark:hover:text-white transition-colors group"
                 >
                   <Github className="w-5 h-5" />
                   <span className="text-sm">GitHub</span>
@@ -172,7 +172,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/in/adithya-challa/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-secondary/60 hover:text-primary transition-colors group"
+                  className="flex items-center gap-3 text-secondary/60 dark:text-white/80 hover:text-primary dark:hover:text-white transition-colors group"
                 >
                   <Linkedin className="w-5 h-5" />
                   <span className="text-sm">LinkedIn</span>
@@ -182,16 +182,16 @@ export default function Footer() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="pt-8 border-t border-secondary/10 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-secondary/60 flex items-center gap-2">
+          <div className="pt-8 border-t border-secondary/10 dark:border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-secondary/60 dark:text-white/80 flex items-center gap-2">
               Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> by Adithya Challa
             </p>
-            <p className="text-sm text-secondary/60">
+            <p className="text-sm text-secondary/60 dark:text-white/80">
               © {new Date().getFullYear()} All rights reserved
             </p>
             <button
               onClick={scrollToTop}
-              className="flex items-center gap-2 text-sm text-secondary/60 hover:text-primary transition-colors group"
+              className="flex items-center gap-2 text-sm text-secondary/60 dark:text-white/80 hover:text-primary dark:hover:text-white transition-colors group"
             >
               Back to top
               <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />

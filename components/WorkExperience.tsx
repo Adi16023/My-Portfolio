@@ -84,17 +84,17 @@ export default function WorkExperience() {
     <section id="experience" className="py-16 px-6 sm:px-8 lg:px-16 xl:px-24" ref={sectionRef}>
       <div className="w-full">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl sm:text-5xl font-mono text-secondary mb-4">
+          <h2 className="text-4xl sm:text-5xl font-mono text-secondary dark:text-white mb-4">
             Experience
           </h2>
-          <p className="text-secondary-light">
+          <p className="text-secondary-light dark:text-white">
             My professional journey
           </p>
         </div>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 hidden md:block transform -translate-x-1/2" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 dark:bg-white/20 hidden md:block transform -translate-x-1/2" />
           
           <div className="space-y-12">
             {experiences.map((exp, index) => {
@@ -112,15 +112,15 @@ export default function WorkExperience() {
                 className="relative group"
               >
                 {/* Timeline dot */}
-                <div className="absolute left-1/2 top-6 w-3 h-3 rounded-full bg-primary border-2 border-white transform -translate-x-1/2 hidden md:block group-hover:scale-150 transition-transform z-10" />
+                <div className="absolute left-1/2 top-6 w-3 h-3 rounded-full bg-primary dark:bg-white border-2 border-white dark:border-gray-900 transform -translate-x-1/2 hidden md:block group-hover:scale-150 transition-transform z-10" />
                 
                 {/* Content */}
                 <div className={`md:w-[calc(50%-2rem)] ${isLeft ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
                   <div className="card-minimal p-6 overflow-hidden">
                     {/* Compact view */}
                     <div className="space-y-3">
-                      <div className="flex items-start justify-between gap-4">
-                        <div className="flex-1">
+                      <div className="flex flex-nowrap items-start justify-between gap-4">
+                        <div className="flex-1 min-w-0">
                           <div className="flex items-center gap-3 mb-2">
                             {exp.logo && (
                               <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-white/5 flex items-center justify-center p-1">
@@ -138,34 +138,34 @@ export default function WorkExperience() {
                                 )}
                               </div>
                             )}
-                            <h3 className="text-xl font-mono text-secondary group-hover:text-primary transition-colors">
+                            <h3 className="text-xl font-mono text-secondary dark:text-white group-hover:text-primary dark:group-hover:text-white transition-colors">
                               {exp.position}
                             </h3>
                           </div>
-                          <div className="flex flex-wrap items-center gap-2 text-sm text-secondary/70">
+                          <div className="flex flex-nowrap items-center gap-2 text-sm text-secondary/70 dark:text-white/80">
                             {exp.website ? (
                               <a
                                 href={exp.website}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="font-semibold inline-flex items-center gap-1 hover:underline hover:text-primary transition-colors group/link"
+                                className="font-semibold inline-flex items-center gap-1 hover:underline hover:text-primary transition-colors group/link whitespace-nowrap"
                               >
                                 {exp.company}
                                 <ExternalLink className="w-3 h-3 hidden group-hover/link:inline" />
                               </a>
                             ) : (
-                              <span className="font-semibold">{exp.company}</span>
+                              <span className="font-semibold whitespace-nowrap">{exp.company}</span>
                             )}
-                            <span>•</span>
-                            <span>{exp.period}</span>
+                            <span className="shrink-0">•</span>
+                            <span className="whitespace-nowrap">{exp.period}</span>
                           </div>
                         </div>
-                        <span className="text-xs font-mono text-secondary/50 whitespace-nowrap">
+                        <span className="text-xs font-mono text-secondary/50 dark:text-white/70 whitespace-nowrap shrink-0">
                           {exp.location}
                         </span>
                       </div>
                       
-                      <p className="text-secondary/80 text-sm leading-relaxed">
+                      <p className="text-secondary/80 dark:text-white/90 text-sm leading-relaxed">
                         {exp.description}
                       </p>
                     </div>
@@ -175,8 +175,8 @@ export default function WorkExperience() {
                       <div className="pt-6 mt-6 border-t border-secondary/10 space-y-4">
                         {/* About company */}
                         <div>
-                          <h4 className="text-xs font-mono text-primary mb-2">ABOUT COMPANY</h4>
-                          <p className="text-sm text-secondary/70 leading-relaxed">
+                          <h4 className="text-xs font-mono text-primary dark:text-white mb-2">ABOUT COMPANY</h4>
+                          <p className="text-sm text-secondary/70 dark:text-white/80 leading-relaxed">
                             {exp.aboutCompany}
                           </p>
                         </div>
@@ -184,7 +184,7 @@ export default function WorkExperience() {
                         {/* Tech Stack */}
                         {exp.techStack && exp.techStack.length > 0 && (
                           <div>
-                            <h4 className="text-xs font-mono text-primary mb-2">TECH STACK</h4>
+                            <h4 className="text-xs font-mono text-primary dark:text-white mb-2">TECH STACK</h4>
                             <div className="flex flex-wrap gap-2">
                               {exp.techStack.map((tech, i) => (
                                 <div
@@ -207,12 +207,12 @@ export default function WorkExperience() {
                         
                         {/* Achievements */}
                         <div>
-                          <h4 className="text-xs font-mono text-primary mb-2">KEY ACHIEVEMENTS</h4>
+                          <h4 className="text-xs font-mono text-primary dark:text-white mb-2">KEY ACHIEVEMENTS</h4>
                           <ul className="space-y-1.5">
                             {exp.achievements.map((achievement, i) => (
-                              <li key={i} className="text-sm text-secondary/70 flex items-start gap-2">
-                                <span className="text-primary mt-1">→</span>
-                                <span>{achievement}</span>
+                              <li key={i} className="text-sm text-secondary/70 dark:text-white/80 flex items-start gap-2">
+                                <span className="text-primary dark:text-white shrink-0 leading-[1.4]">→</span>
+                                <span className="leading-relaxed">{achievement}</span>
                               </li>
                             ))}
                           </ul>

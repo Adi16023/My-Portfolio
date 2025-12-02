@@ -144,10 +144,10 @@ export default function Projects() {
     <section id="projects" className="py-16 px-6 sm:px-8 lg:px-16 xl:px-24">
       <div className="w-full">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl sm:text-5xl font-mono text-secondary mb-4">
+          <h2 className="text-4xl sm:text-5xl font-mono text-secondary dark:text-white mb-4">
             Projects
           </h2>
-          <p className="text-secondary-light">
+          <p className="text-secondary-light dark:text-white">
             Selected works and experiments from my portfolio
           </p>
         </div>

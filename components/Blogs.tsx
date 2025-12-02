@@ -82,23 +82,23 @@ export default function Blogs() {
     <section id="blogs" className="py-16 px-6 sm:px-8 lg:px-16 xl:px-24">
       <div className="w-full">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl sm:text-5xl font-mono text-secondary mb-4">
+          <h2 className="text-4xl sm:text-5xl font-mono text-secondary dark:text-white mb-4">
             Blogs
           </h2>
-          <p className="text-secondary-light">
+          <p className="text-secondary-light dark:text-white">
             Tech insights & creative stories
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 relative">
           {/* Vertical Divider Line */}
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-secondary/20 transform -translate-x-1/2"></div>
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-secondary/20 dark:bg-white/20 transform -translate-x-1/2"></div>
           
           {/* Left Side - Tech Blogs (Light Theme) */}
           <div className="space-y-4 relative">
             <div className="flex items-center gap-3 mb-6">
-              <Code2 className="w-6 h-6 text-primary" />
-              <h3 className="text-2xl font-mono text-secondary">Tech Blogs</h3>
+              <Code2 className="w-6 h-6 text-primary dark:text-white" />
+              <h3 className="text-2xl font-mono text-secondary dark:text-white">Tech Blogs</h3>
             </div>
             
             <div className="relative">
@@ -153,9 +153,9 @@ export default function Blogs() {
                   className="text-center"
                 >
                   <div className="bg-white/90 backdrop-blur-md border-2 border-primary/30 rounded-2xl px-8 py-6 shadow-xl">
-                    <Code2 className="w-12 h-12 text-primary mx-auto mb-3" />
-                    <h4 className="text-2xl font-mono text-secondary mb-2">Coming Soon</h4>
-                    <p className="text-secondary/70 text-sm font-mono">Tech blogs are on the way</p>
+                    <Code2 className="w-12 h-12 text-primary dark:text-white mx-auto mb-3" />
+                    <h4 className="text-2xl font-mono text-secondary dark:text-white mb-2">Coming Soon</h4>
+                    <p className="text-secondary/70 dark:text-white/80 text-sm font-mono">Tech blogs are on the way</p>
                   </div>
                 </motion.div>
               </div>
@@ -165,8 +165,8 @@ export default function Blogs() {
           {/* Right Side - Stories (Blue Inverted Theme) */}
           <div className="space-y-4">
             <div className="flex items-center gap-3 mb-6">
-              <Sparkles className="w-6 h-6 text-primary" />
-              <h3 className="text-2xl font-mono text-secondary">Story Blogs</h3>
+              <Sparkles className="w-6 h-6 text-primary dark:text-white" />
+              <h3 className="text-2xl font-mono text-secondary dark:text-white">Story Blogs</h3>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4 auto-rows-[240px]">
@@ -180,7 +180,7 @@ export default function Blogs() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                   viewport={{ once: true, margin: "-100px" }}
-                  className={`group relative rounded-2xl border-2 border-secondary/30 bg-[#96cfff] overflow-hidden hover:border-secondary transition-all ${
+                  className={`group relative rounded-2xl border-2 border-secondary/30 dark:border-white/30 bg-[#96cfff] dark:bg-gray-800 overflow-hidden hover:border-secondary dark:hover:border-white transition-all ${
                     story.width === 'xlarge' ? 'md:col-span-5' :
                     story.width === 'large' ? 'md:col-span-3' :
                     story.width === 'medium' ? 'md:col-span-2' :
@@ -201,7 +201,7 @@ export default function Blogs() {
                     
                     {/* Content */}
                     <div className="p-5 flex flex-col flex-1">
-                      <div className="flex items-center gap-2 mb-2 text-[10px] font-mono text-secondary/70">
+                      <div className="flex items-center gap-2 mb-2 text-[10px] font-mono text-secondary/70 dark:text-white/70">
                         <Calendar className="w-3 h-3" />
                         <span>{story.date}</span>
                         <span>•</span>
@@ -209,15 +209,15 @@ export default function Blogs() {
                         <span>{story.readTime}</span>
                       </div>
                       
-                      <h4 className="text-sm font-mono text-secondary mb-2 group-hover:text-primary transition-colors line-clamp-1">
+                      <h4 className="text-sm font-mono text-secondary dark:text-white mb-2 group-hover:text-primary dark:group-hover:text-white transition-colors line-clamp-1">
                         {story.title}
                       </h4>
                       
-                      <p className="text-secondary/80 text-xs leading-relaxed flex-1 line-clamp-2">
+                      <p className="text-secondary/80 dark:text-white/80 text-xs leading-relaxed flex-1 line-clamp-2">
                         {story.excerpt}
                       </p>
                       
-                      <div className="mt-2 text-primary text-xs font-mono group-hover:gap-2 gap-1 flex items-center transition-all">
+                      <div className="mt-2 text-primary dark:text-white text-xs font-mono group-hover:gap-2 gap-1 flex items-center transition-all">
                         Read <span className="group-hover:translate-x-1 transition-transform">→</span>
                       </div>
                     </div>

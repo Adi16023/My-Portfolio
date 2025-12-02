@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import ScrollProgress from '@/components/ScrollProgress'
+import { ThemeProvider } from '@/components/ThemeProvider'
 
 export const metadata: Metadata = {
   title: 'Adithya Challa | SDE Portfolio',
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ScrollProgress />
-        <Navigation />
-        <main>{children}</main>
+        <ThemeProvider>
+          <ScrollProgress />
+          <Navigation />
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   )
