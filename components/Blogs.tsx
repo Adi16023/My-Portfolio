@@ -152,7 +152,7 @@ export default function Blogs() {
                   viewport={{ once: true }}
                   className="text-center"
                 >
-                  <div className="bg-white/90 backdrop-blur-md border-2 border-primary/30 rounded-2xl px-8 py-6 shadow-xl">
+                  <div className="bg-[#96cfff]/90 dark:bg-gray-800/90 backdrop-blur-md border-2 border-secondary/30 dark:border-white/30 rounded-2xl px-8 py-6 shadow-xl">
                     <Code2 className="w-12 h-12 text-primary dark:text-white mx-auto mb-3" />
                     <h4 className="text-2xl font-mono text-secondary dark:text-white mb-2">Coming Soon</h4>
                     <p className="text-secondary/70 dark:text-white/80 text-sm font-mono">Tech blogs are on the way</p>

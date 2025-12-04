@@ -171,7 +171,7 @@ export default function WorkExperience() {
                     </div>
                     
                     {/* Expanded details - shown on hover */}
-                    <div className="max-h-0 opacity-0 group-hover:max-h-[500px] group-hover:opacity-100 overflow-hidden transition-all duration-500 ease-in-out">
+                    <div className="max-h-0 opacity-0 group-hover:max-h-[2000px] group-hover:opacity-100 overflow-hidden transition-all duration-500 ease-in-out">
                       <div className="pt-6 mt-6 border-t border-secondary/10 space-y-4">
                         {/* About company */}
                         <div>
