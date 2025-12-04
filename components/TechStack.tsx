@@ -39,7 +39,7 @@ export default function TechStack() {
   const row2Items = [...techStack.row2, ...techStack.row2]
 
   return (
-    <section id="tech-stack" className="py-16 px-6 sm:px-8 lg:px-16 xl:px-24 bg-gradient-to-b from-transparent to-primary/5 dark:to-white/5">
+    <section id="tech-stack" className="py-16 px-6 sm:px-8 lg:px-16 xl:px-24 bg-transparent">
       <div className="w-full">
         <div className="mb-12 text-center">
           <h2 className="text-4xl sm:text-5xl font-mono text-secondary dark:text-white mb-4">
