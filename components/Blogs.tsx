@@ -6,44 +6,13 @@ import Image from 'next/image'
 
 const techBlogs = [
   {
-    title: 'Building Scalable Apps with Next.js 14',
-    excerpt: 'Exploring the App Router and Server Components',
-    date: 'Nov 25, 2024',
+    title: 'Digital Chef: 7-Step Guide to Cooking Up a Website',
+    excerpt: 'A comprehensive guide to building your first website from scratch',
+    date: 'Dec 12, 2025',
     readTime: '8 min',
-    url: '#',
-    width: 'large', // 3 cols
-  },
-  {
-    title: 'Microservices Architecture',
-    excerpt: 'Design patterns for distributed systems',
-    date: 'Nov 18, 2024',
-    readTime: '12 min',
-    url: '#',
-    width: 'medium', // 2 cols - Row 1: 2 cards (3+2)
-  },
-  {
-    title: 'State Management in React',
-    excerpt: 'Modern approaches beyond Redux',
-    date: 'Nov 10, 2024',
-    readTime: '6 min',
-    url: '#',
-    width: 'medium', // 2 cols
-  },
-  {
-    title: 'TypeScript Best Practices',
-    excerpt: 'Type safety in large codebases',
-    date: 'Nov 3, 2024',
-    readTime: '10 min',
-    url: '#',
-    width: 'large', // 3 cols - Row 2: 2 cards (2+3)
-  },
-  {
-    title: 'API Design Patterns',
-    excerpt: 'RESTful and GraphQL best practices',
-    date: 'Oct 20, 2024',
-    readTime: '7 min',
-    url: '#',
-    width: 'xlarge', // 5 cols - Row 3: 1 card (full width)
+    url: 'https://www.linkedin.com/pulse/digital-chef-7-step-guide-cooking-up-website-adithya-challa-wdelc',
+    image: 'https://media.licdn.com/dms/image/v2/D5612AQE5IFgN0-vvww/article-cover_image-shrink_720_1280/B56ZsCKqvqHkAI-/0/1765267911402?e=1767225600&v=beta&t=N8mUsCCbvwslEjsw0YzV685qu510UvK4Y6gMUPBGfUc',
+    width: 'xlarge',
   },
 ]
 
@@ -102,16 +71,18 @@ export default function Blogs() {
             </div>
             
             <div className="relative">
-              {/* Blog Cards with blur effect */}
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-4 auto-rows-[180px] blur-sm pointer-events-none">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-4 auto-rows-[240px]">
                 {techBlogs.map((blog, index) => (
-                  <motion.div
+                  <motion.a
+                    href={blog.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.05 }}
                     viewport={{ once: true, margin: "-100px" }}
-                    className={`group relative rounded-2xl border-2 border-secondary/20 bg-white p-5 transition-all ${
+                    className={`group relative rounded-2xl border-2 border-secondary/20 dark:border-white/20 bg-white dark:bg-gray-800 overflow-hidden hover:border-secondary dark:hover:border-white transition-all ${
                       blog.width === 'xlarge' ? 'md:col-span-5' :
                       blog.width === 'large' ? 'md:col-span-3' :
                       blog.width === 'medium' ? 'md:col-span-2' :
@@ -119,7 +90,22 @@ export default function Blogs() {
                     }`}
                   >
                     <div className="h-full flex flex-col">
-                      <div className="flex items-center gap-2 mb-3 text-[10px] font-mono text-secondary/60">
+                      {/* Image Preview */}
+                      {blog.image && (
+                        <div className="w-full h-32 bg-secondary/10 overflow-hidden relative">
+                          <Image 
+                            src={blog.image} 
+                            alt={blog.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            unoptimized
+                          />
+                        </div>
+                      )}
+                      
+                      {/* Content */}
+                      <div className="p-5 flex flex-col flex-1">
+                      <div className="flex items-center gap-2 mb-2 text-[10px] font-mono text-secondary/70 dark:text-white/70">
                         <Calendar className="w-3 h-3" />
                         <span>{blog.date}</span>
                         <span>•</span>
@@ -127,37 +113,21 @@ export default function Blogs() {
                         <span>{blog.readTime}</span>
                       </div>
                       
-                      <h4 className="text-sm font-mono text-secondary mb-2 line-clamp-2">
+                      <h4 className="text-sm font-mono text-secondary dark:text-white mb-2 group-hover:text-primary dark:group-hover:text-white transition-colors line-clamp-1">
                         {blog.title}
                       </h4>
                       
-                      <p className="text-secondary/70 text-xs leading-relaxed flex-1 line-clamp-3">
+                      <p className="text-secondary/80 dark:text-white/80 text-xs leading-relaxed flex-1 line-clamp-2">
                         {blog.excerpt}
                       </p>
                       
-                      <div className="mt-2 text-primary text-xs font-mono gap-1 flex items-center">
-                        Read <span>→</span>
+                      <div className="mt-2 text-primary dark:text-white text-xs font-mono group-hover:gap-2 gap-1 flex items-center transition-all">
+                        Read <span className="group-hover:translate-x-1 transition-transform">→</span>
+                      </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.a>
                 ))}
-              </div>
-
-              {/* Coming Soon Overlay */}
-              <div className="absolute inset-0 flex items-center justify-center bg-background/30 backdrop-blur-sm rounded-2xl">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className="bg-[#96cfff]/90 dark:bg-gray-800/90 backdrop-blur-md border-2 border-secondary/30 dark:border-white/30 rounded-2xl px-8 py-6 shadow-xl">
-                    <Code2 className="w-12 h-12 text-primary dark:text-white mx-auto mb-3" />
-                    <h4 className="text-2xl font-mono text-secondary dark:text-white mb-2">Coming Soon</h4>
-                    <p className="text-secondary/70 dark:text-white/80 text-sm font-mono">Tech blogs are on the way</p>
-                  </div>
-                </motion.div>
               </div>
             </div>
           </div>
