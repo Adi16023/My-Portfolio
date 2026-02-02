@@ -15,6 +15,8 @@ const techStack = {
     { name: 'Firebase', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
     { name: 'Redis', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg' },
     { name: 'MySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+    { name: 'Langchain', logo: 'https://www.google.com/s2/favicons?domain=langchain.com&sz=128' },
+    { name: 'Pinecone', logo: 'https://www.google.com/s2/favicons?domain=pinecone.io&sz=128' },
     { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
   ],
   row2: [
@@ -29,6 +31,8 @@ const techStack = {
     { name: 'Bitbucket', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg' },
     { name: 'Jest', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg' },
     { name: 'Vite', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' },
+    { name: 'n8n', logo: 'https://www.google.com/s2/favicons?domain=n8n.io&sz=128' },
+    { name: 'Swagger UI', logo: 'https://www.google.com/s2/favicons?domain=swagger.io&sz=128' },
     { name: 'C++', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
   ],
 }

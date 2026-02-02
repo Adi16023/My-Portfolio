@@ -7,6 +7,33 @@ import { Building2, ExternalLink } from 'lucide-react'
 
 const experiences = [
   {
+    company: 'Youkti',
+    position: 'Founding Engineer | SDE 2',
+    period: 'July 2025 - Present',
+    location: 'Remote',
+    website: 'https://youkti.ai/',
+    logo: 'https://www.google.com/s2/favicons?domain=youkti.ai&sz=128',
+    description: 'Leading frontend development and UI architecture for an AI-powered platform, focusing on performance optimization, real-time features, and end-to-end ownership of high-impact modules.',
+    aboutCompany: 'youkti.ai is an AI-powered platform delivering intelligent solutions and seamless user experiences.',
+    techStack: [
+      { name: 'Next.js', logo: 'https://www.google.com/s2/favicons?domain=nextjs.org&sz=128' },
+      { name: 'Langchain', logo: 'https://www.google.com/s2/favicons?domain=langchain.com&sz=128' },
+      { name: 'Pinecone', logo: 'https://www.google.com/s2/favicons?domain=pinecone.io&sz=128' },
+      { name: 'n8n', logo: 'https://www.google.com/s2/favicons?domain=n8n.io&sz=128' },
+      { name: 'Swagger UI', logo: 'https://www.google.com/s2/favicons?domain=swagger.io&sz=128' },
+    ],
+    achievements: [
+      'Led a user-centric UI revamp, improving usability, visual clarity, and frontend performance across 15+ modules',
+      'Integrated ARYA AI using WebSocket-based token streaming, ensuring stable real-time UI updates with efficient state handling',
+      'Designed and maintained a Testing Runbook to standardize user flows, reduce regressions, and ensure cross-browser compatibility',
+      'Optimized API polling with reduced intervals and smarter state management to minimize redundant network calls',
+      'Built server-side logo fetching system with multi-source fallback (Clearbit, Google Favicons, DuckDuckGo) and 24-hour caching to bypass browser blocking',
+      'Resolved critical build and deployment issues by creating custom scripts ensuring clean logs, reliable builds, and consistent Next.js deployments',
+      'Refactored complex modules using code-splitting to improve performance and maintainability',
+      'Took end-to-end ownership of high-impact frontend issues across development, testing, and production instances',
+    ],
+  },
+  {
     company: 'Vananam Ventures (The Reward Store)',
     position: 'Software Development Engineer',
     period: 'Sep 2023 - Jan 2025',
