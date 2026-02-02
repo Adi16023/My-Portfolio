@@ -11,7 +11,7 @@ const techBlogs = [
     date: 'Dec 12, 2025',
     readTime: '8 min',
     url: 'https://www.linkedin.com/pulse/digital-chef-7-step-guide-cooking-up-website-adithya-challa-wdelc',
-    image: 'https://media.licdn.com/dms/image/v2/D5612AQE5IFgN0-vvww/article-cover_image-shrink_720_1280/B56ZsCKqvqHkAI-/0/1765267911402?e=1767225600&v=beta&t=N8mUsCCbvwslEjsw0YzV685qu510UvK4Y6gMUPBGfUc',
+    image: '/images/tech-blogs/Computer Science.jpeg',
     width: 'xlarge',
   },
 ]
@@ -71,7 +71,7 @@ export default function Blogs() {
             </div>
             
             <div className="relative">
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-4 auto-rows-[240px]">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                 {techBlogs.map((blog, index) => (
                   <motion.a
                     href={blog.url}
@@ -92,7 +92,7 @@ export default function Blogs() {
                     <div className="h-full flex flex-col">
                       {/* Image Preview */}
                       {blog.image && (
-                        <div className="w-full h-32 bg-secondary/10 overflow-hidden relative">
+                        <div className="w-full h-64 bg-secondary/10 overflow-hidden relative">
                           <Image 
                             src={blog.image} 
                             alt={blog.title}
