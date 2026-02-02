@@ -39,7 +39,7 @@ const experiences = [
     period: 'Sep 2023 - Jan 2025',
     location: 'Bangalore, IN',
     website: 'https://www.vananam.com/',
-    logo: 'https://logo.clearbit.com/vananam.com',
+    logo: 'https://www.google.com/s2/favicons?domain=vananam.com&sz=128',
     description: 'Designed, developed, and optimized Admin, Client, and Customer-facing PWA applications, ensuring responsive performance across Android and iOS platforms.',
     aboutCompany: 'The Reward Store by Vananam Ventures provides comprehensive reward and loyalty solutions for businesses.',
     techStack: [
@@ -67,7 +67,7 @@ const experiences = [
     period: 'June - Sep 2023',
     location: 'Remote',
     website: 'https://www.tmbc.in/',
-    logo: 'https://logo.clearbit.com/tmbc.in',
+    logo: 'https://www.google.com/s2/favicons?domain=tmbc.in&sz=128',
     description: 'Maintained the deployment of several in-house websites on Supabase, while leveraging CSS and Material UI to design an aesthetically pleasing and user-friendly frontend.',
     aboutCompany: 'The Madras Branding Company is a creative branding and digital solutions agency based in Chennai.',
     techStack: [
