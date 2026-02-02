@@ -95,9 +95,9 @@ export default function Footer() {
               <div className="w-20 h-20 rounded-full bg-secondary/10 mb-4 overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
-                  src="https://github.com/Adi16023.png" 
+                  src="/images/Profile Pic.png" 
                   alt="Adithya Challa"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-150 -translate-y-1"
                 />
               </div>
               <h3 className="font-mono text-lg text-secondary dark:text-white mb-3">Adithya Challa</h3>
