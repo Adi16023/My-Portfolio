@@ -14,6 +14,24 @@ const techBlogs = [
     image: '/images/tech-blogs/Computer Science.jpeg',
     width: 'xlarge',
   },
+  {
+    title: 'How We Repurposed ClickUp Into a Unified Testing Runbook for Faster, Effective Releases',
+    excerpt: 'At a fast-moving AI startup, your product evolves every week. We needed a lightweight, cross-team way to quickly understand what was tested, what changed, and where each release stood.',
+    date: 'Jan 15, 2026',
+    readTime: '6 min',
+    url: 'https://youkti.ai/blog/how-we-repurposed-clickup-into-a-unified-testing-runbook-for-faster-effective-releases',
+    image: '/images/tech-blogs/clickup.81bc0498.png',
+    width: 'large',
+  },
+  {
+    title: 'Scaling SaaS: How We Built Two Products from One Codebase',
+    excerpt: 'The Problem: Building a multi-product SaaS platform? You face a brutal choice: Share everything, duplicate everything, or over-abstract. We needed a better way.',
+    date: 'Jan 10, 2026',
+    readTime: '7 min',
+    url: 'https://youkti.ai/blog/scaling-saas-how-we-built-two-products-from-one-codebase',
+    image: '/images/tech-blogs/saas.webp',
+    width: 'medium',
+  },
 ]
 
 const stories = [
