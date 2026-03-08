@@ -92,7 +92,7 @@ export default function Blogs() {
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
                 {techBlogs.map((blog, index) => (
                   <motion.a
-                    href={blog.url}
+                    href={blog.url} 
                     target="_blank"
                     rel="noopener noreferrer"
                     key={index}

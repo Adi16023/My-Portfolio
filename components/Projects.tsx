@@ -6,34 +6,35 @@ import Image from 'next/image'
 
 const projects = [
   {
-    title: 'Endless Design',
-    description: 'A stunning portfolio website with mobile-first design philosophy, featuring great UI/UX presented in a unique web view that mimics mobile aesthetics.',
+    title: "Naveen's Portfolio",
+    description: "A clean and modern developer portfolio showcasing Naveen's projects, skills, and professional journey in software development.",
     category: 'Portfolio',
-    year: '2023',
-    tech: ['React', 'CSS', 'Responsive Design'],
-    url: 'https://endless-design.vercel.app/',
-    width: 'narrow',
-    image: '/images/endlessdesign.png',
-  },
-  {
-    title: 'Rocket Incentive',
-    description: 'Modern landing page for a comprehensive loyalty and rewards platform, designed to engage users and drive customer retention.',
-    category: 'Landing Page',
     year: '2025',
-    tech: ['React', 'TailwindCSS', 'Framer Motion'],
-    url: 'https://www.rocketincentive.com/',
-    width: 'wide',
-    image: '/images/rocketincentive.png',
+    tech: ['React', 'Vite', 'CSS'],
+    url: 'https://naveens-portfolioofficial.vercel.app/',
+    width: 'narrow',
+    image: '/images/Naveen-portfolio.png',
   },
   {
-    title: 'VendorContacts',
-    description: 'Secure platform bridging Architects and Vendors with end-to-end encrypted file and text sharing, ensuring privacy without third-party access.',
-    category: 'Web Platform',
-    year: '2023',
-    tech: ['Next.js', 'Encryption', 'WebRTC'],
-    url: 'https://vendorcontacts.vercel.app/',
+    title: 'MG Industries',
+    description: 'Professional business website for MG Industries, presenting their industrial products, services, and company profile to clients and partners.',
+    category: 'Business Website',
+    year: '2025',
+    tech: ['React', 'Vite', 'CSS'],
+    url: 'https://www.mgindustries.co.in/',
     width: 'narrow',
-    image: '/images/vendorcontacts.png',
+    image: '/images/mg-industries.png',
+    imagePosition: 'left',
+  },
+  {
+    title: 'Rashi Arora',
+    description: 'Creative marketing strategist and brand consultant helping businesses build memorable brands and drive growth through strategic storytelling.',
+    category: 'Portfolio',
+    year: '2026',
+    tech: ['Next.js', 'Framer Motion', 'TailwindCSS'],
+    url: 'https://rashiaroraofficial.com/',
+    width: 'wide',
+    image: '/images/Rashi-portfolio.png',
   },
   {
     title: 'My Gamers World',
@@ -64,6 +65,38 @@ const projects = [
     url: 'https://www.cualixis.com/',
     width: 'narrow',
     image: '/images/cualixis.png',
+    imagePosition: 'left',
+  },
+  {
+    title: 'Endless Design',
+    description: 'A stunning portfolio website with mobile-first design philosophy, featuring great UI/UX presented in a unique web view that mimics mobile aesthetics.',
+    category: 'Portfolio',
+    year: '2023',
+    tech: ['React', 'CSS', 'Responsive Design'],
+    url: 'https://endless-design.vercel.app/',
+    width: 'narrow',
+    image: '/images/endlessdesign.png',
+  },
+  {
+    title: 'Rocket Incentive',
+    description: 'Modern landing page for a comprehensive loyalty and rewards platform, designed to engage users and drive customer retention.',
+    category: 'Landing Page',
+    year: '2025',
+    tech: ['React', 'TailwindCSS', 'Framer Motion'],
+    url: 'https://www.rocketincentive.com/',
+    width: 'wide',
+    image: '/images/rocketincentive.png',
+  },
+  {
+    title: 'VendorContacts',
+    description: 'Secure platform bridging Architects and Vendors with end-to-end encrypted file and text sharing, ensuring privacy without third-party access.',
+    category: 'Web Platform',
+    year: '2023',
+    tech: ['Next.js', 'Encryption', 'WebRTC'],
+    url: 'https://vendorcontacts.vercel.app/',
+    width: 'narrow',
+    image: '/images/vendorcontacts.png',
+    imagePosition: 'left'
   },
 ]
 
@@ -100,6 +133,7 @@ function FlipCard({ project, index }: { project: typeof projects[0], index: numb
               alt={project.title}
               fill
               className="object-cover"
+              style={{ objectPosition: (project as any).imagePosition || 'center' }}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               quality={95}
               priority={index < 3}
